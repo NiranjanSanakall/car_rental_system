@@ -1,5 +1,9 @@
 $(function(){
 
+    let data = []
+    data = $.session.get("data")
+    console.log(data)
+
     $("#addCar").on("click",function(e){
         e.preventDefault()
 

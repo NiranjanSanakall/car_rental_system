@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/handle-window-session-storage/jquery.session.js"></script>
+    <script src="../myScripts/printRecipt.js"></script>
+    <title>Document</title>
+</head>
+<body style="margin-left: 3rem; margin-top:1rem;">
+    <span style="font-weight: bold;">Resevation Id : </span><span id="reservId"></span>
+    <h1 style="margin-left:5rem;">MOVE EASY SERVICES</h1><br><br>
+    <span style="display:inline-block; width:10rem; font-weight:bold">Customer Id : </span><span id="cusId" style="display:inline-block; width:13rem;"></span><span style="display:inline-block; width:7rem; font-weight:bold">Car Id : </span><span id="carId" style="display:inline-block; width:10rem;"></span><br>
+    <span style="display:inline-block; width:10rem; font-weight:bold">Customer Name : </span><span id="cName" style="display:inline-block; width:13rem;"></span><span style="display:inline-block; width:7rem; font-weight:bold">Car Brand : </span><span id="carBrand" style="display:inline-block; width:10rem;"></span><br>
+    <span style="display:inline-block; width:10rem; font-weight:bold">Customer Email : </span><span id="cEmail" style="display:inline-block; width:13rem;"></span><span style="display:inline-block; width:7rem; font-weight:bold">Car Model : </span><span id="carModel" style="display:inline-block; width:10rem;"></span><br>
+    <span style="display:inline-block; width:10rem; font-weight:bold">Customer Phone no :</span><span id="cPhone" style="display:inline-block; width:13rem;"></span><span style="display:inline-block; width:7rem; font-weight:bold">Car Number : </span><span id="carNumber" style="display:inline-block; width:10rem;"></span><br>
+    <span style="display:inline-block; margin-left:23rem; width:7rem; font-weight:bold">Car Milage :</span><span id="carMilage" style="display:inline-block; width:10rem;"></span><br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Reserved Date</th>
+                <th>Returning Date</th>
+                <th>No. of Cars</th>
+                <th>Rent Price</th>
+                <th>Rent Type</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody id="reciptDetails">
+
+        </tbody>
+    </table>
+    <button id="printRecipt" style="margin-top: 10rem;">print</button>
+</body>
+</html>

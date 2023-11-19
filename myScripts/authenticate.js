@@ -26,7 +26,12 @@ $(function(){
             alert("It seems like your password is wrong!!!")
         }
         else{
-            window.location = "../myPages/register.html"
+            window.location = "../myPages/profile.html"
+            $.session.set("id",info[0].cust_id)
+            $.session.set("name",info[0].name)
+            $.session.set("emailId",info[0].emailId)
+            $.session.set("phone_no",info[0].phone_no)
+            $.session.set("address",info[0].address) 
         }
     })
 })

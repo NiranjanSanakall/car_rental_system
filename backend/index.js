@@ -6,6 +6,8 @@ const registration = require('./registration')
 const authentication = require('./authentication')
 const addCar = require('./addCar')
 const getCars = require('./getCars')
+const reservations = require('./reservations')
+const allReserves = require('./allReserves')
 
 
 const app = new express()
@@ -23,6 +25,8 @@ app.use('/',registration)
 app.use('/',authentication)
 app.use('/',addCar)
 app.use('/',getCars)
+app.use('/',reservations)
+app.use('/',allReserves)
 
 
 
