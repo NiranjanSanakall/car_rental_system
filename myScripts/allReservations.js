@@ -32,7 +32,6 @@ $(function(){
         "Car Brand : <span id='cBrand"+i+"'>"+car_data[i][0].car_brand+"</span><br>"+
         "Car Model : <span id='cModel"+i+"'>"+car_data[i][0].car_model+"</span><br>"+
         "Car Milage : <span id='cMilage"+i+"'>"+car_data[i][0].car_milage+"</span><br>"+
-        "Car Image : <span id='cImg"+i+"'>"+car_data[i][0].car_image+"</span><br>"+
         "Reservation type : <span id='cRph"+i+"'>"+reservation_data[i].reservation_type+"</span><br>"+
         "Reserved Date : <span id='rDate"+i+"'>"+reservation_data[i].reserved_date+"</span><br>"+
         "Returning Date : <span id='retDate"+i+"'>"+reservation_data[i].returned_date+"</span><br>"+
@@ -47,12 +46,21 @@ $(function(){
         e.preventDefault()
         let btnType = this.id.split('-')[0]
         let i = this.id.split('-')[1]
-        alert(btnType)
-        alert(i)
         if(btnType=="recipt"){
             console.log("heppp")
             $.session.set("i",i)
             window.location = "../myPages/recipts.html"
+        }
+        else{
+            $.ajax({
+                url:"http://localhost:8000/deleteReservations/"+reservation_data[i].res_id,
+                type:"GET",
+                dataType:"json",
+                success: function(result){
+                    alert("data deleted...")
+                }
+            })
+            $("#allReservations li:eq("+i+")").remove();
         }
         
     })

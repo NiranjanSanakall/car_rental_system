@@ -29,7 +29,7 @@ $(function(){
     }
 
     $.ajax({
-        url:"http://localhost:8000/recipt/"+reservation_data[i].cust_id,
+        url:"http://localhost:8000/getCustomer/"+reservation_data[i].cust_id,
         type:"GET",
         async:false,
         dataType:"json",

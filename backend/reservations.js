@@ -26,7 +26,7 @@ router.post('/addReservation',(req,resp)=>{
     })
 })
 
-router.get('/recipt/:cust_id',(req,resp)=>{
+router.get('/getCustomer/:cust_id',(req,resp)=>{
     let cust_id= req.params.cust_id;
     myDB.query("select * from customers where cust_id="+cust_id,(err,result)=>{
         if(err) console.log("some Error"+err)

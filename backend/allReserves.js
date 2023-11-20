@@ -13,6 +13,16 @@ router.get('/allReservations/:cust_id',(req,resp)=>{
     })
 })
 
+router.get('/deleteReservations/:res_id',(req,resp)=>{
+    let res_id= req.params.res_id;
+    myDB.query("delete from reservations where res_id="+res_id,(err,result)=>{
+        if(err) console.log("some Error"+err)
+        else{
+            resp.send(result)
+        }
+    })
+})
+
 
 router.get('/car/:car_id',(req,resp)=>{
     let car_id= req.params.car_id;

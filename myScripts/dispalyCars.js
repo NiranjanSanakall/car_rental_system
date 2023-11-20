@@ -23,7 +23,7 @@ $(function(){
         "Car Brand :<span id='cBrand"+i+"'>"+allCars[i].car_brand+"</span><br>"+
         "Car Model :<span id='cModel"+i+"'>"+allCars[i].car_model+"</span><br>"+
         "Car Milage :<span id='cMilage"+i+"'>"+allCars[i].car_milage+"</span><br>"+
-        "Car Image :<span id='cImg"+i+"'>"+allCars[i].car_image+"</span><br>"+
+        "Car Image :<img id='cImg"+i+"' src="+allCars[i].car_image+" width=500px; height=520px;><br>"+
         "<input id='rphB"+i+"' type='radio' value='per hour' name='rentType'>Rent per hour :<span id='cRph"+i+"'>"+allCars[i].renting_per_hour+"</span><br>"+
         "<input id='rpdB"+i+"' type='radio' value='per day' name='rentType'>Rent per day :<span id='cRpd"+i+"'>"+allCars[i].renting_per_day+"</span><br>"+
         "<input type='number' id='num-"+i+"' style='display:none' placeholder='Enter Number of cars'>"+
