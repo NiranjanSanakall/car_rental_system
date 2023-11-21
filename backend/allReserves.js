@@ -34,5 +34,40 @@ router.get('/car/:car_id',(req,resp)=>{
     })
 })
 
+router.post('/updateStsAmt',(req,resp)=>{
+    let total_amount = req.body.totalAmt
+    let status = req.body.status
+    let res_id = req.body.reservId
+
+    let data = []
+    data.push(total_amount);data.push(status);data.push(res_id);
+
+    let mySql = "update reservations set total_amount = ?, reserv_status = ? where res_id=?"
+
+    myDB.query(mySql,data,(err,result)=>{
+        if(err) console.log("Some Error : "+err)
+        else{
+            resp.send(result)
+        }
+    })
+})
+
+router.post('/updateStatus',(req,resp)=>{
+    let status = req.body.status
+    let res_id = req.body.res_id
+
+    let data = []
+    data.push(status);data.push(res_id);
+
+    let mySql = "update reservations set reserv_status = ? where res_id=?"
+
+    myDB.query(mySql,data,(err,result)=>{
+        if(err) console.log("Some Error : "+err)
+        else{
+            resp.send(result)
+        }
+    })
+})
+
 
 module.exports = router
